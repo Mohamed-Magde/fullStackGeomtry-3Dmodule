@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 
-class Geometry(object):
+class Geometry(models.Model):
     title = models.CharField(max_length=250)
     width = models.IntegerField(default=100)
     height = models.IntegerField(default=100)
