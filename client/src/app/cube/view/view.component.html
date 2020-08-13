@@ -1,1 +1,19 @@
 <p>view works!</p>
+<div class="container">
+  <h1>View Post</h1>
+
+  <a href="#" routerLink="/cube/index" class="btn btn-primary">Back</a>
+
+  <div>
+    <strong>ID:</strong>
+    <p>{{ cube.id }}</p>
+  </div>
+
+  <div>
+    <strong>Title:</strong>
+    <p>{{ cube.title }}</p>
+  </div>
+
+  <div #rendererContainer></div>
+
+</div>

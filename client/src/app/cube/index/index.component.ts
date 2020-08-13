@@ -1,15 +1,27 @@
 import { Component, OnInit } from '@angular/core';
+import { CubeService } from '../cube.service';
+import { Cube } from '../cube';
 
 @Component({
   selector: 'app-index',
   templateUrl: './index.component.html',
-  styleUrls: ['./index.component.css']
+  styleUrls: ['./index.component.css'],
 })
 export class IndexComponent implements OnInit {
-
-  constructor() { }
+  cubes: Cube[] = [];
+  constructor(public cubeService: CubeService) {}
 
   ngOnInit(): void {
+    this.cubeService.getAll().subscribe((data: Cube[]) => {
+      this.cubes = data;
+      console.log(this.cubes);
+    });
   }
 
+  deleteCube(id) {
+    this.cubeService.delete(id).subscribe((res) => {
+      this.cubes = this.cubes.filter((item) => item.id != id);
+      console.log('Cube deleted successfully!');
+    });
+  }
 }
