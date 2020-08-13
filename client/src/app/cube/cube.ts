@@ -1,4 +1,4 @@
-export interface Post {
+export interface Cube {
   id: number;
   title: string;
   width: number;
