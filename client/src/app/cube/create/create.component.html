@@ -1,7 +1,10 @@
 <div class="container">
-  <h1>Create new Cube</h1>
-  <a href="#" routerLink="/cube/index" class="btn btn-primary">Back</a>
 
+
+  <div class="block">
+    <h1 class="heading-1">Create new Cube</h1>
+    <a class="link" href="#" routerLink="/cube/index" class="btn btn-primary">Back</a>
+  </div>
   <form [formGroup]="form" (ngSubmit)="submit()">
 
     <div class="form-group">
@@ -38,7 +41,7 @@
 
     <div class="form-group">
       <label for="color">Color:</label>
-      <input formControlName="color" id="color" type="color" class="form-control">
+      <input formControlName="color" id="color" type="text" class="form-control">
       <div *ngIf="f.color.touched && f.color.invalid" class="alert alert-danger">
         <div *ngIf="f.color.errors.required">Color is required.</div>
       </div>
@@ -77,6 +80,7 @@
     </div>
 
 
-
+    <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button>
   </form>
+
 </div>

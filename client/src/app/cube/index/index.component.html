@@ -1,14 +1,20 @@
 <div class="container">
-  <h1>Angular and Django CRUD APP</h1>
-  <a href="#" routerLink="/cube/create/" class="btn btn-success">Create New Cube</a>
-  <tr *ngFor="let cube of cubes">
-    <td>{{ cube.id }}</td>
-    <td>{{ cube.title }}</td>
-    <td>
-      <a href="#" [routerLink]="['/cube/', cube.id, 'view']" class="btn btn-info">View</a>
-      <a href="#" [routerLink]="['/cube/', cube.id, 'edit']" class="btn btn-primary">Edit</a>
-      <button type="button" (click)="deleteCube(cube.id)" class="btn btn-danger">Delete</button>
-    </td>
-  </tr>
+  <div class="block">
+    <h1 class="heading-1">Angular and Django CRUD APP</h1>
+    <a href="#" routerLink="/cube/create/" class="btn btn-success btn-create">Create New Cube</a>
+  </div>
+  <div class="list">
+    <tr class="list-item" *ngFor="let cube of cubes">
+      <td>{{ cube.id }}</td>
+      <td>{{ cube.title }}</td>
+      <td class="links">
+        <a href="#" [routerLink]="['/cube/', cube.id, 'view']" class="btn btn-info">View</a>
+        <a href="#" [routerLink]="['/cube/', cube.id, 'edit']" class="btn btn-primary">Edit</a>
+        <button type="button" (click)="deleteCube(cube.id)" class="btn btn-danger">Delete</button>
+      </td>
+
+    </tr>
+  </div>
+
 
 </div>

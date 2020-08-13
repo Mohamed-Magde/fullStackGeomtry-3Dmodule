@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { CubeService } from '../cube.service';
 import { Cube } from '../cube';
+import * as THREE from 'three';
 
 @Component({
   selector: 'app-index',

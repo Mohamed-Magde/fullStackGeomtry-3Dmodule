@@ -1,0 +1,38 @@
+.heading-1 {
+  margin-bottom: .5em;
+}
+
+.btn-create {
+  margin-bottom: .5em;
+
+}
+
+.list {}
+
+.list-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2em;
+
+}
+
+.links {
+  width: 20em;
+  margin-left: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+
+
+.container {
+  margin-top: 5em;
+}
+
+.block {
+  margin-bottom: 2em;
+}

@@ -41,7 +41,7 @@ export class CubeService {
   update(id, Cube): Observable<Cube> {
     return this.httpClient
       .put<Cube>(
-        this.apiURL + '/geometry/' + id,
+        this.apiURL + '/geometry/' + id + '/',
         JSON.stringify(Cube),
         this.httpOptions
       )
